@@ -7,8 +7,8 @@
     <title>Lab 03</title>
 
     <!-- Meta Tags -->
-    <meta name="author" content="...">
-    <meta name="description" content="...">
+    <meta name="author" content="Edmund Pau">
+    <meta name="description" content="eSport Website">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
@@ -16,11 +16,73 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
 
 <body>
-    
+    <header>
+        <div class="inner-container wide-flex">
+            <div class="flex-container">
+                <h1><span class="highlight">e</span>Sports</h1>
+                <div class="menu-icon">
+                    <img src="img/joystick-logo.svg" alt="Menu Icon">
+                    <span>menu</span>
+                </div>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li class="dropdown">
+                        <a href="#">
+                            <img src="img/pink-circle.svg" alt="Games Icon" class="icon">
+                            GAMES
+                            <img src="img/down-chevron.svg" alt="Down Chevron" class="chevron">
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">CS:GO</a></li>
+                            <li><a href="#">DOTA 2</a></li>
+                            <li><a href="#">Fortnite</a></li>
+                            <li><a href="#">League of Legends</a></li>
+                            <li><a href="#">Overwatch</a></li>
+                            <li><a href="#">Pokémon</a></li>
+                            <li><a href="#">PUGB</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">
+                            <img src="img/yellow-circle.svg" alt="Schedule Icon" class="icon">
+                            SCHEDULE
+                            <img src="img/down-chevron.svg" alt="Down Chevron" class="chevron">
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">Australia & EU</a></li>
+                            <li><a href="#">East Asia</a></li>
+                            <li><a href="#">North America</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">
+                            <img src="img/green-circle.svg" alt="Register Icon" class="icon">
+                            REGISTER
+                            <img src="img/down-chevron.svg" alt="Down Chevron" class="chevron">
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">Individual Competitors</a></li>
+                            <li><a href="#">Team Events</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2><span class="highlight">e</span>Sports League</h2>
+                <p>Get your head in the game! Register as an individual competitor or for a team event in an upcoming tournament near you.</p>
+                <button class="register-btn">Register Now</button>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,9 +1,244 @@
 /* NOTE: Make sure that when you complete your Lab, you leave a comment at the top of this file listing which new properties you used! */
 
+/*
+  The custom property used is animation on the Register Now button. Line 175-185
+*/
+
 :root {
   --dk-grey: #263238;
   --hot-pink: #EC407A;
   --yellow: #FDD835;
   --green: #8BC34A;
   --white: #FAFAFA;
+  --font-size-large: 38px;
+  --font-size-medium: 20px;
+  --font-size-small: 18px;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+
+header {
+    background-color: var(--dk-grey);
+    color: var(--white);
+    padding: 10px 0;
+}
+
+.inner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: var(--font-size-large);
+    margin: 0;
+}
+
+h1 .highlight {
+    color: var(--hot-pink);
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menu-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 600px;
+}
+
+.main-menu li {
+    position: relative;
+}
+
+.main-menu a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px 80px; 
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-medium);
+}
+
+.main-menu .icon {
+    margin-right: 8px;
+    width: 12px; 
+    height: 12px; 
+}
+
+.main-menu .chevron {
+    margin-left: 8px;
+    width: 12px; 
+    height: 12px; 
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--dk-grey);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 150px;
+}
+
+.submenu li {
+    border-bottom: 1px solid var(--hot-pink);
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.submenu a {
+    padding: 10px;
+    font-size: var(--font-size-small);
+}
+
+.hero {
+    background-image: url('../img/crowd-background.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 60px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 400px; 
+}
+
+.hero-content h2 {
+    font-size: 36px;
+    margin: 0 0 20px 0;
+}
+
+.hero-content h2 .highlight {
+    color: var(--hot-pink);
+}
+
+.hero-content p {
+    font-size: var(--font-size-small);
+    margin: 0 0 20px 0;
+    color: var(--dk-grey);
+}
+
+.register-btn {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    animation: moveLeftRight 2s infinite alternate;
+}
+
+@keyframes moveLeftRight {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(100px); 
+  }
+}
+
+.register-btn:hover {
+    background: linear-gradient(90deg, #feb47b, #ff7e5f);
+}
+
+/* Media Queries */
+@media (max-width: 720px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .flex-container {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    h1 {
+        margin-left: 10px;
+    }
+
+    .menu-icon img {
+        margin-right: 5px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.show-nav {
+        display: block;
+    }
+
+    .main-menu {
+        flex-direction: column;
+        background-color: var(--dk-grey);
+    }
+
+    .main-menu a {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .submenu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .main-menu li:hover .submenu,
+    .main-menu li:focus-within .submenu {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.show-nav {
+    max-height: 100vh;
 }
